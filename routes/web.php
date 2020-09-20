@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return 'Halaman Homepage.<br>Selamat belajar Laravel!';
+});
+
+Route::get('about', function() {
+	return 'Aplikasi <strong>laravelapp</strong> dibuat sebagai latihan untuk mempelajari Laravel.';
 });
