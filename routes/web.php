@@ -20,9 +20,13 @@ Route::get('about', function() {
 	return 'Aplikasi <strong>laravelapp</strong> dibuat sebagai latihan untuk mempelajari Laravel.';
 });
 
-Route::get('halaman-rahasia', ['as' => 'secret', function() {
-	return 'Anda sedang melihat <strong>Halaman Rahasia.</strong>';
-}]);
+// Route::get('halaman-rahasia', ['as' => 'secret', function() {
+// 	return 'Anda sedang melihat <strong>Halaman Rahasia.</strong>';
+// }]);
+
+Route::get('halamana-rahasia',function() {
+	return 'Anda sedang melihat <strong>Halaman Rahasi.</strong>';
+})->name('secret');
 
 Route::get('showsecret', function() {
 	return redirect()->route('secret');
