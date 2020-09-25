@@ -21,5 +21,6 @@ Route::get('about', function () {
 
 Route::get('siswa', function () {
 	$siswa = ['Rasmus Lerdorf', 'Taylor Otwell', 'Brendan Eich', 'John Resig'];
-	return view('siswa.index', compact('siswa'));
+	// return view('siswa.index', compact('siswa'));
+	return view('siswa.index')->with('siswa', $siswa);
 });
